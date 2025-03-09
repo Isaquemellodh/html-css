@@ -7,24 +7,28 @@
 </head>
 <body>
     <h1>Teste de formulário</h1>
-
     <form action="cadastro.php" method="get" autocomplete="on">
+
         <p>
-            <label for="iano">Em que ano você nascel?</label>
-            <input type="number" name="ano" id="iano" min="1900" max="2025" oninput="calcIdade">
+            <label for="iano">Em que ano você nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2025" oninput="calCidade()">
         </p>
-        <label for="iidade">Sua idade</label>
-        <output id="iidade">0</output>
+
+        <p>
+            <label for="iidade">Sua idade é:</label>
+            <output id="iidade">0</output>
+        </p>
+
         <p>
             <input type="submit" value="Enviar">
-            <input type="reset" value="Apagar">
+            <input type="reset" value="Limpar">
         </p>
     </form>
 
     <script>
-        function calcIdade(){
-            let atual = new Date().getFullYear()
-            iidade.innnerHTML = Number(atual) - Number(iano.value)       
+        function calCidade(){
+           let atual = new Date().getFullYear()
+           iidade.innerHTML = Number(atual) - Number(iano.value)
         }
     </script>
 </body>
